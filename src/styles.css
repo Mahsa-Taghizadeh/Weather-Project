@@ -107,3 +107,10 @@ input[type="text"]:focus {
 #farenheit:hover {
   color: rgb(4, 157, 203);
 }
+.coded-by {
+  text-align: center;
+  color: blueviolet;
+}
+footer {
+  text-align: center;
+}
