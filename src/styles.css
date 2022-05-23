@@ -1,0 +1,109 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 40px;
+}
+
+h1 {
+  font-size: 25px;
+  position: relative;
+  left: 9px;
+  display: inline;
+  color: rgb(166, 80, 247);
+  font-family: "Lobster", cursive;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+.logo {
+  font-size: 30px;
+  color: blueviolet;
+  position: relative;
+  top: 3px;
+  right: -8px;
+}
+
+.btn {
+  background: blueviolet;
+  color: white;
+  border-radius: 14px;
+  border: none;
+  display: inline;
+  position: relative;
+  top: 7px;
+  box-shadow: 0px 4px 9px gray;
+}
+.form-items {
+  margin: 0 auto;
+}
+
+.result {
+  margin-top: 40px;
+}
+
+.row.second {
+  margin-top: 30px;
+}
+.col {
+  margin: 0 10px 10px 0;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.emj {
+  display: block;
+  color: blueviolet;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.footer {
+  text-align: right;
+}
+.col.forecast {
+  box-shadow: 0px 4px 9px gray;
+}
+.container.all {
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px grey;
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: 40px 30px;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+}
+#search-input {
+  border-radius: 15px;
+  border-color: blueviolet;
+  padding: 5px 20px;
+  font-weight: bold;
+  position: relative;
+  top: 9px;
+  box-shadow: 0px 4px 9px gray;
+}
+#temperature,
+#temps {
+  font-size: 47px;
+  font-weight: bold;
+  text-align: center;
+}
+#celsius,
+#farenheit {
+  text-decoration: none;
+  color: blueviolet;
+}
+#degree {
+  font-size: 18px;
+  position: relative;
+  bottom: 20px;
+}
+#celsius:hover,
+#farenheit:hover {
+  color: rgb(4, 157, 203);
+}
