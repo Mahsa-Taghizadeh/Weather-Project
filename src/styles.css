@@ -93,22 +93,28 @@ input[type="text"]:focus {
   font-weight: bold;
   text-align: center;
 }
-#celsius,
-#farenheit {
-  text-decoration: none;
-  color: blueviolet;
-}
 #degree {
   font-size: 18px;
   position: relative;
   bottom: 20px;
 }
-#celsius:hover,
-#farenheit:hover {
-  color: rgb(4, 157, 203);
+
+#temps .active {
+  color: blueviolet;
+  text-decoration: none;
 }
-.coded-by {
-  text-align: center;
+#temps .active:hover {
+  color: black;
+  text-decoration: none;
+}
+#city-name {
+  font-size: 35px;
+  font-weight: bold;
+}
+#country-name {
+  font-weight: bold;
+}
+.me {
   color: blueviolet;
 }
 footer {

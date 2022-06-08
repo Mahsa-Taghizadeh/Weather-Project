@@ -27,10 +27,11 @@ function showTemp(response) {
   console.log(response.data);
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = response.data.name;
-  //let countryName = document.querySelector("#country-name");
-  //countryName.innerHTML = response.data.sys.country;
+  let countryName = document.querySelector("#country-name");
+  countryName.innerHTML = response.data.sys.country;
   let tempResult = document.querySelector("#temperature");
-  tempResult.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemp = response.data.main.temp;
+  tempResult.innerHTML = Math.round(celsiusTemp);
   let decrip = document.querySelector("#description");
   decrip.innerHTML = response.data.weather[0].main;
   let pre = document.querySelector("#pressure");
@@ -81,20 +82,27 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentButton = document.querySelector("#current-btn");
 currentButton.addEventListener("click", currentLocation);
 
+function showCelsius(event) {
+  event.preventDefault();
+  //farenheitDegree.classList.remove("active");
+  // celsiusDegree.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+let celsiusDegree = document.querySelector("#celsius");
+celsiusDegree.addEventListener("click", showCelsius);
+
+function showFarenheit(event) {
+  event.preventDefault();
+  //celsiusDegree.classList.remove("active");
+  //farenheitDegree.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
+}
+
+let celsiusTemp = null;
+
+let farenheitDegree = document.querySelector("#farenheit");
+farenheitDegree.addEventListener("click", showFarenheit);
+
 search("Paris");
-
-// function showCelsius(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector("#temperature");
-//   temperatureElement.innerHTML = 11;
-// }
-// let celsiusDegree = document.querySelector("#celsius");
-// celsiusDegree.addEventListener("click", showCelsius);
-
-// function showFarenheit(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector("#temperature");
-//   temperatureElement.innerHTML = Math.round((11 * 9) / 5 + 32);
-// }
-// let farenheitDegree = document.querySelector("#farenheit");
-// farenheitDegree.addEventListener("click", showFarenheit);

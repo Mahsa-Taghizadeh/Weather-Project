@@ -47,15 +47,18 @@
         <div class="col-4 temp">
           <img src="" id="icon" alt="" />
           <div id="temps">
-            <span id="temperature"> 11 </span>
+            <span id="temperature"> ?? </span>
             <span id="degree">
-              <a href="#" id="celsius">°C</a> |
-              <a href="#" id="farenheit">°F</a>
+              <a href="#" id="celsius" class="active" >°C</a> |
+              <a href="#" id="farenheit" class="active">°F</a>
             </span>
           </div>
         </div>
         <div class="col-3 result">
-          <h2 id="city-name">?<span id="country-name">,?</span></h2>
+          <div class="ccName">
+          <span id="city-name">?</span>
+          (<span id="country-name">?</span>)
+          </div>
           <div class="details">
             <div id="week-day">? ??:??</div>
             <div id="description">?</div>
@@ -102,11 +105,12 @@
           ><span class="forecastdays">Wed</span><br />0°C
         </div>
       </div>
-      <footer>
-     <a class="coded-by" href="https://github.com/Mahsa-Taghizadeh/Weather-Project">Open-source code</a>
+     
+    </div>
+     <footer>
+     <a class="me" href="https://github.com/Mahsa-Taghizadeh/Weather-Project">Open-source code</a>
      <span><strong> by Mahsa Taghizadeh</strong></span>
       </footer>
-    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
