@@ -55,6 +55,9 @@ input[type="text"]:focus {
   border: 1px solid grey;
   border-radius: 20px;
 }
+.forecast-max {
+  opacity: 0.6;
+}
 
 #mainIcon {
   display: block;
@@ -109,5 +112,10 @@ input[type="text"]:focus {
   margin: 30px auto;
   max-width: 1000px;
   padding: 40px 30px;
-  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  background: linear-gradient(
+    68.7deg,
+    rgb(235, 217, 221) 8%,
+    rgb(216, 174, 211) 55.4%,
+    rgb(145, 130, 196) 91.1%
+  );
 }
