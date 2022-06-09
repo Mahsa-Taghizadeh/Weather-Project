@@ -22,9 +22,29 @@ function formatDate(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+
+  let forecastHTML = `<div class="row second">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col forecast-border">
+          <div class="forecast-days">${day}</div>
+          <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="">
+          <div class="forecast-temp">
+            <span class="forecast-min">10°C </span>
+            <span class="forecast-max"> 12°C</span>
+          </div>
+          </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
 
 function showTemp(response) {
-  console.log(response.data);
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = response.data.name;
   let countryName = document.querySelector("#country-name");
@@ -40,7 +60,7 @@ function showTemp(response) {
   hum.innerHTML = response.data.main.humidity;
   let win = document.querySelector("#wind");
   win.innerHTML = Math.round(response.data.wind.speed);
-  let icon = document.querySelector("#icon");
+  let icon = document.querySelector("#mainIcon");
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -106,3 +126,4 @@ let farenheitDegree = document.querySelector("#farenheit");
 farenheitDegree.addEventListener("click", showFarenheit);
 
 search("Paris");
+displayForecast();

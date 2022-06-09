@@ -12,13 +12,10 @@ h1 {
   font-family: "Lobster", cursive;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-}
 input[type="text"]:focus {
   outline: none;
 }
+
 .logo {
   font-size: 30px;
   color: blueviolet;
@@ -46,9 +43,11 @@ input[type="text"]:focus {
 }
 
 .row.second {
-  margin-top: 30px;
+  margin-top: 50px;
 }
-.col {
+
+.forecast-border {
+  box-shadow: 0px 4px 9px gray;
   margin: 0 10px 10px 0;
   text-align: center;
   font-weight: bold;
@@ -57,26 +56,10 @@ input[type="text"]:focus {
   border-radius: 20px;
 }
 
-.emj {
+#mainIcon {
   display: block;
-  color: blueviolet;
-  font-size: 40px;
-  line-height: 60px;
-}
-
-.footer {
-  text-align: right;
-}
-.col.forecast {
-  box-shadow: 0px 4px 9px gray;
-}
-.container.all {
-  border-radius: 12px;
-  box-shadow: 2px 2px 5px grey;
-  margin: 30px auto;
-  max-width: 1000px;
-  padding: 40px 30px;
-  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  margin: 0 auto;
+  margin-top: 30px;
 }
 #search-input {
   border-radius: 15px;
@@ -117,6 +100,14 @@ input[type="text"]:focus {
 .me {
   color: blueviolet;
 }
-footer {
+.footer {
   text-align: center;
+}
+.container.all {
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px grey;
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: 40px 30px;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
